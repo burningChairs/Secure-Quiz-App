@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archasaur Secure Quiz App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ url_for('home') }}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+      <a href="{{ url_for('info') }}" class="{% if '/info' in request.path %}active{% endif %}">Info</a>
+      <a href="{{ url_for('cards') }}" class="{% if '/cards' in request.path %}active{% endif %}">Archasaur Cards</a>
+      <a href="{{ url_for('extra_eras_question', q_num=0) }}" class="{% if '/extra_eras' in request.path %}active{% endif %}">Extra Eras Quiz</a>
+      <a href="{{ url_for('extra_species_question', q_num=0) }}" class="{% if '/extra_species' in request.path %}active{% endif %}">Extra Species Quiz</a>
+      <a href="{{ url_for('extra_environment_question', q_num=0) }}" class="{% if '/extra_environment' in request.path %}active{% endif %}">Extra Environment Quiz</a>
+    </nav>
+  </header>
 
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>Thank you for using my web app!</p>
+    <p>Archasaur Secure Quiz App by Ann Jordan</p>
+  </footer>
+
+  <!-- Include main JS -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

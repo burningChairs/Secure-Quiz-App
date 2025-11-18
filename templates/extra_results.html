@@ -1,1 +1,39 @@
+{% extends "layout.html" %}
 
+{% block content %}
+<div class="results-container">
+  <h2>{{ quiz_name }} Results</h2>
+
+  <!-- Result message -->
+  <p id="result-message">{{ message }}</p>
+
+  <!-- Score display -->
+  <p><strong>Your Score:</strong> {{ score }} / {{ total }} ({{ (score / total * 100)|round(0) }}%)</p>
+
+  <!-- Detailed feedback -->
+  <ul>
+    {% for f in feedback %}
+      <li>
+        <strong>{{ f.question }}</strong><br>
+        {% if f.correct %}
+          ✅ Correct
+        {% else %}
+          ❌ Incorrect
+        {% endif %}
+        <br>
+        <em>{{ f.reasoning }}</em>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Back to home button -->
+  <a href="{{ url_for('home') }}" class="retake-btn" onclick="clearQuizData()">Back to Home</a>
+</div>
+
+<!-- Optional: show popup with score when page loads -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    showResultPopup({{ score }}, {{ total }});
+  });
+</script>
+{% endblock %}

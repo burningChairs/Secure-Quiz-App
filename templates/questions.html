@@ -1,1 +1,38 @@
+{% extends "layout.html" %}
 
+{% block content %}
+<div class="quiz-container">
+  <h2>Question {{ q_num + 1 }} of {{ total }}</h2>
+  <p>{{ question.question }}</p>
+
+  <form method="POST" id="question-form-{{ q_num }}" onsubmit="return handleSubmit({{ q_num }});">
+    {% if question.answer == -1 %}
+      <!-- Favorite-archasaur dropdown -->
+      <select name="answer" required>
+        <option value="">-- Choose your favorite --</option>
+        {% for idx, opt in enumerate(question.options) %}
+          <option value="{{ idx }}">{{ opt }}</option>
+        {% endfor %}
+      </select>
+    {% else %}
+      <!-- Radio options -->
+      {% for idx, opt in enumerate(question.options) %}
+        <div class="option">
+          <input type="radio" id="opt{{ idx }}" name="answer" value="{{ idx }}" required>
+          <label for="opt{{ idx }}">{{ opt }}</label>
+        </div>
+      {% endfor %}
+    {% endif %}
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  // Prevent multiple submissions using localStorage
+  function handleSubmit(questionNum) {
+    const form = document.getElementById(`question-form-${questionNum}`);
+    let selected = form.answer.value; // get selected answer
+    return submitAnswer(questionNum, selected); // submitAnswer() from script.js
+  }
+</script>
+{% endblock %}
