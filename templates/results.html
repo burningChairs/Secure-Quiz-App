@@ -1,0 +1,20 @@
+{% extends "layout.html"%}
+
+{% block title %}Quiz Results {{ qnum }}{% endblock %}
+
+{% block content %}
+<h1>Quiz Results</h1>
+<p>{{ message }}</p>
+<p>your score: {{ score }} / {{ total }} ({{ percent }}%)</p>
+
+<hr>
+{% for r in results %}
+<h3>Question {{ r.qnum }}: {{ r.question }}</h3>
+<p>Your answer: {{ r.correct_answer }}</p>
+<p>Correct answer: {{ r.correct_answer }}</p>
+<p>Reasoning: {{ r.reasoning }}</p>
+</hr>
+{% endfor %}
+
+<a href="{{ ur;_for('retake') }}" class="button">Retake Quiz</a>
+{% endblock %}
