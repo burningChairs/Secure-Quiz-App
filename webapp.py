@@ -63,7 +63,7 @@ quiz = {
 			"Triceratops": "Triceratops (dinosaur)",
 			"Dimorphodon": "Dimorphodon (pterosaur)",
 		},
-		"answer": "Any!",
+		"answer": "Any",
 		"reasoning": "Nice choice!"
 	},
 }
