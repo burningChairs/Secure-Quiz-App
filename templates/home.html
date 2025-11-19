@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content%}
+<h1>Welcome to my Archasaur Quiz! (=ↀωↀ=) </h1>
+<p>I love Archasaurs a lot, but I'm still debating whether my favorite dinosaur is an Ankylosaurus, a Spinosaurus, or an Allosaurus. I know for sure my favorite pterosaur is a Rhamphorhynchus. Which had me thinking - people don't often know there's a difference between a Dinosaur and Pterosaur. The “dinosaurs” most people envision - while some are dinosaurs - are all Archasaurs! There are many misconceptions from movies and other media. I created this quiz and studying material to have people understand more about Archasaurs. I hope to teach you something :)</p>
+<ul>
+	<li><a href="{{ url_for('question', qnum=1) }}" class="button">Take Quiz! ᓚ₍ ^. .^₎</a></li>
+	<li><a href="{{ url_for('info') }}" class="button">Learn about Archasaurs ₍^. .^₎⟆</a></li>
+</ul>
+{% endblock %}
