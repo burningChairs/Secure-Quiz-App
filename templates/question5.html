@@ -7,11 +7,13 @@
 <p>{{ question }}</p>
 
 <form method="POST">
-	{% for key, option in options.items() %}
-		<input type="radio" name="answer" value="{{ key }}" id="opt-{{ key }}">
-		<label for="opt-{{ key }}">{{ key }}: {{ option }}</label><br>
-	{% endfor %}
-	<br>
+	<label for="archasaur">Choose your favorite out of the following Archasaurs:</label><br>
+	<select name="answer" id="archasaur">
+		{% for key, val in options.items() %}
+			<option value="{{ key }}">{{ val }}</option>
+		{% endfor %}
+	</select>
+	<br><br>
 	<input type="submit" value="Submit">
 </form>
 {% endblock %}
