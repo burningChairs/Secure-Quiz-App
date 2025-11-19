@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<div id="content">{% block content %}{% endblock %}</div>
+
+<div id="footer">
+	<a href="{{ url_for('home') }}" class="button">Home</a>
+	<a href="{{ url_for('retake') }}" class="button">Start Over</a>
+	<p>Thank you for using my web app!<br>Archasaur Secure Quiz App by Ann Jordan</p>
+</div>
+
+</body>
+</html>
