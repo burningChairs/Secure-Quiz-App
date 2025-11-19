@@ -57,7 +57,7 @@ quiz = {
 			"Ankylosaurus": "Ankylosaurus (dinosaur)",
 			"Spinosaurus": "Spinosaurus (dinosaur)",
 			"Dilophosaurus": "Dilophosaurus (dinosaur)",
-			"Pteranodon": "Pteranodon (dinosaur)",
+			"Pteranodon": "Pteranodon (pterosaur)",
 			"Brachiosaurus": "Brachiosaurus (dinosaur)",
 			"Velociraptor": "Velociraptor (dinosaur)",
 			"Triceratops": "Triceratops (dinosaur)",
