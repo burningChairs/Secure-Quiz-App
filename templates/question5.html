@@ -1,0 +1,17 @@
+{% extends "layout.html"%}
+
+{% block title %}Question {{ qnum }}{% endblock %}
+
+{% block content %}
+<h1>Question {{ qnum }}</h1>
+<p>{{ question }}</p>
+
+<form method="POST">
+	{% for key, option in options.items() %}
+		<input type="radio" name="answer" value="{{ key }}" id="opt-{{ key }}">
+		<label for="opt-{{ key }}">{{ key }}: {{ option }}</label><br>
+	{% endfor %}
+	<br>
+	<input type="submit" value="Submit">
+</form>
+{% endblock %}
