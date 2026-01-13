@@ -1,5 +1,30 @@
-# I had a really long conversation with perplextiy and google searches with my original idea in this project but since it wasnt working the way I wanted it to I ended up restarting so I wont be adding that. i will just be uploading the searches that had to do with the final project
-# 
+# I had a couple prompts with perplextiy and google searches with my original idea in this project but 
+# 		since it wasnt working the way I wanted it to I ended up restarting and making it completely different. 
+# 		so I wont be adding that. i will just be uploading the searches that had to do with the final project
+# I had also given up on using perplexity and used google instead because it was getting frusterating and
+#		personally confusing (I hope that was okay)
+
+# https://www.google.com/search?q=letting+a+user+choose+any+option+in+a+secure+quiz
+# https://www.google.com/search?q=what+is+Pseudosuchia+prehistoric
+# https://www.google.com/search?q=what+is+the+prehistoric+crocodiles+clade+called
+# https://www.google.com/search?q=what+is+the+prehistoric+crocodilian+clade+called
+# https://www.google.com/search?q=common+dinosaurs+and+pterosaurs
+# https://www.google.com/search?q=Using+POST+in+html+correctly
+# https://www.google.com/search?q=ways+to+make+css+better
+# https://www.google.com/search?q=what+is+hover+and+active+in+css
+# https://www.google.com/search?q=how+to+use+css+link+color+change
+# https://www.google.com/search?q=what+is+input+on+css
+# https://www.google.com/search?q=how+to+have+the+ability+to+have+a+%22submit%22+input+on+css
+# https://www.google.com/search?q=ways+to+edit+a+button+in+css
+# https://www.google.com/search?q=how++to+create+a+button+in+css
+# https://www.google.com/search?q=How+should+the+code+look+in+the+html+of+a+secure+quiz
+# https://www.google.com/search?q=having+the+user+able+to+retake+a+quiz+using+python+and+html
+# https://www.google.com/search?q=allowing+a+user+to+redo+a+website+with+new+data
+# https://www.google.com/search?q=having+questions+in+python+to+have+all+the+from+a+quiz+app+answers+in+one+page
+# https://www.google.com/search?q=creating+an+app+route+for+request.method+%3D%3D+%27POST%27
+# https://www.google.com/search?q=how+to+create+a+quizzes+questions+in+python
+# https://www.google.com/search?q=using+navbar+to+create+a+quiz
+# https://www.google.com/search?q=how+to+create+a+working+secure+app+with+multiple+pages
 
 import os
 from flask import Flask, render_template, request, redirect, url_for, session
