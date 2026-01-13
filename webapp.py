@@ -1,3 +1,6 @@
+# I had a really long conversation with perplextiy and google searches with my original idea in this project but since it wasnt working the way I wanted it to I ended up restarting so I wont be adding that. i will just be uploading the searches that had to do with the final project
+# 
+
 import os
 from flask import Flask, render_template, request, redirect, url_for, session
 
