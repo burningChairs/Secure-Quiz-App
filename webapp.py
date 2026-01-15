@@ -156,7 +156,7 @@ def results():
 		detailed_results.append({
 			"qnum": qnum,
 			"question": qdata['question'],
-			"user_answer": user_answer,
+			"user_answer": user_answer or "None",
 			"correct_answer": None if correct or is_any else qdata['answer'],
 			"correct": correct,
 			"reasoning": qdata['reasoning']
