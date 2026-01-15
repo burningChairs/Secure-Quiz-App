@@ -10,11 +10,12 @@
 <hr>
 {% for r in results %}
   <h3>Question {{ r.qnum }}: {{ r.question }}</h3>
-  <p>Your answer: {{ r.correct_answer }}</p>
+  <p>Your answer: {{ r.user_answer }}</p>
   <p>Correct answer: {{ r.correct_answer }}</p>
-  <!-- {% if not r.correct and r.correct_answer %} -->
-    <span class="result-status {{ 'correct' if r.correct else 'incorrect' }}"> {{ 'Correct!' if r.correct else 'Incorrect' }} </span>
-  <!--{% endif %}-->
+  <span class="result-status {{ 'correct' if r.correct else 'incorrect' }}">
+  {{ 'Correct!' if r.correct else 'Incorrect' }}
+</span>
+
   <p>Reasoning: {{ r.reasoning }}</p>
   </hr>
 {% endfor %}
