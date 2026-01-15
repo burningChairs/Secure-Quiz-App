@@ -117,11 +117,10 @@ def question(qnum):
 		session['current_q'] = 1
 		
 	#save answer if first time
-	if request.method == 'POST' and str(qnum) not in session['answers']:
+	if request.method == 'POST'
 		selected = request.form.get('answer')
-		if selected:
-			session['answers'][str(qnum)] = selected
-			session['current_q'] = qnum + 1
+		session['answers'][str(qnum)] = selected or "None"
+		session['current_q'] = qnum + 1
 		# Redirect to the next question or results
 		if qnum < TOTAL_QUESTIONS:
 			return redirect(url_for('question', qnum=qnum+1))
@@ -156,9 +155,9 @@ def results():
 		detailed_results.append({
 			"qnum": qnum,
 			"question": qdata['question'],
-			"user_answer": user_answer or "None",
-			"correct_answer": None if correct or is_any else qdata['answer'],
-			"correct": correct,
+			"user_answer": session['answers'].get(str(qnum), "None"),
+			"correct_answer": "Any" if qdata['answers'] == "Any" elsse qdata['answer'],
+			"correct": is_any or (session['answers'].get(str(qnum)) == qdata['answer']),
 			"reasoning": qdata['reasoning']
 		})
 		
