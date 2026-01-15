@@ -146,14 +146,18 @@ def results():
 	
 	for qnum, qdata in quiz.items():
 		user_answer = session['answers'].get(str(qnum))
-		correct = (qdata['answer'] == "Any") or (user_answer == qdata['answer'])
+
+		is_any = qdata['answer'] == "Any"
+		correct = is_any or (user_answer == qdata['answer'])
+		
 		if correct:
 			score += 1
+			
 		detailed_results.append({
 			"qnum": qnum,
 			"question": qdata['question'],
 			"user_answer": user_answer,
-			"correct_answer": qdata['answer'],
+			"correct_answer": None if correct or is_any else qdata['answer'],
 			"correct": correct,
 			"reasoning": qdata['reasoning']
 		})
